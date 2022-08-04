@@ -19,3 +19,23 @@ const PRIMES = Array(999999).fill(false);
         if (isPrime[i]) PRIMES[2*i+3] = true;
     }
 })(999999);
+
+// Function to Get Number Information (including Invalid Input)
+function getNumberInfo() {
+    // Set Up Variable
+    let txt = "";
+    // Get the value of the input field
+    let num = document.getElementById("mynumber").value;
+    // Check if input is valid
+    if (isNaN(num) || num.toString().length == 0 || num<100 || num>1000000 || !Number.isInteger(Number(num))) {
+        txt += `Invalid Input.  Please enter a whole number between 100 and 1000000.`;
+    } else {
+        // Remove any leading zeros
+        num = parseInt(num);
+        txt += `You have entered the number ${num}. <p>`;
+        txt += `There are ${circularPrimes(num)} circular primes below ${num}.`;
+    }
+
+    // Display the Information in the Browser
+    document.getElementById("numinfo").innerHTML = txt;
+}
