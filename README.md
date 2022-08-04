@@ -44,3 +44,6 @@ As a user, I expect the function `circularPrimes(1000000)` to return 55.
 
 The function `circularPrimes(n)` returns a number, where `n` is a number between 100 and 1000000.
 
+## Features
+
+Allows the user to enter the number (limit).
