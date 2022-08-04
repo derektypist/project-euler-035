@@ -23,5 +23,24 @@
         <p>Find the number of circular primes below n, where n is between 100 and 1000000.  Begin by entering the number.</p>
         <p><strong>NOTE:</strong> Circular Primes individual rotation can exceed n.</p>
     </section>
+
+    <!-- Set Up Form -->
+    <section class="container-fluid">
+        <form>
+            <!-- Set Up Label and Input -->
+            <article class="mb-3">
+                <label for="mynumber" class="form-label">Number of Circular Primes (Required)</label>
+                <input class="form-control" placeholder="Enter whole number between 100 and 1000000 (e.g. 100)" title="Enter whole number between 100 and 1000000 (e.g. 100)" id="mynumber">
+            </article>
+
+            <!-- Set Up and Center Buttons -->
+            <article class="d-grid gap-2 d-flex justify-content-center">
+                <button type="button" class="btn btn-info" onclick="getNumberInfo()">Submit</button>
+                <button type="reset" class="btn btn-warning" onclick="clearInfo()">Reset</button>
+            </article>
+        </form>
+
+        
+    </section>
 </body>
 </html>
