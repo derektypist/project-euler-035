@@ -39,3 +39,9 @@ function getNumberInfo() {
     // Display the Information in the Browser
     document.getElementById("numinfo").innerHTML = txt;
 }
+
+// Function to check if the number n is a circular prime
+function isCircularPrime(n) {
+    const nString = n.toString();
+    return nString.split("").every((_,index) => PRIMES[nString.slice(index) + nString.slice(0,index)]);
+}
