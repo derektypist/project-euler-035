@@ -45,3 +45,21 @@ function isCircularPrime(n) {
     const nString = n.toString();
     return nString.split("").every((_,index) => PRIMES[nString.slice(index) + nString.slice(0,index)]);
 }
+
+/* 
+    Function to return the number of circular primes below n
+    circularPrimes(100)     returns 13
+    circularPrimes(100000)  returns 43
+    circularPrimes(250000)  returns 45
+    circularPrimes(500000)  returns 49
+    circularPrimes(750000)  returns 49
+    circularPrimes(1000000) returns 55
+*/
+function circularPrimes(n) {
+    if (n<2) return 0;
+    let count = 1;
+    for (let i=3;i<n;i+=2) {
+        if (isCircularPrime(i)) count++;
+    }
+    return count;
+}
